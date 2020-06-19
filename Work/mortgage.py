@@ -18,14 +18,13 @@ while principal > 0:
         principal = principal * (1 + rate/12) - payment
     if principal < 0:
         payment += principal
-        print(payment)
         month += 1
         break
     total_paid = total_paid + payment
     month += 1
 
 
-    print(str(month) + ' ' + str(total_paid) + ' ' + str(principal))
+    print(f'{month} {total_paid:.2f} {principal:.2f}')
     
-print('Total paid ' + str(total_paid))
-print('Months ' + str(month))
+print(f'Total paid : {total_paid:.2f}')
+print(f'Months : {month}')
